@@ -14,7 +14,7 @@ const Navigation: React.FC = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/categories" className="flex gap-2 items-center">
+          <Link to="/products" className="flex gap-2 items-center">
             <span>Categories</span>
             <ChevronDown />
           </Link>

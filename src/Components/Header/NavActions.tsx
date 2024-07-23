@@ -9,6 +9,9 @@ import Search from "../../Icons/Search.tsx";
 import { Link } from "react-router-dom";
 
 const NavActions: React.FC = () => {
+  const userString = sessionStorage.getItem("user");
+  const user = userString ? JSON.parse(userString) : null;
+
   return (
     <div className="flex items-center gap-8">
       {/* Search Input */}
@@ -30,7 +33,9 @@ const NavActions: React.FC = () => {
       </button>
       {/* Profile Btn */}
       <button>
-        <Avatar />
+        <Link to={user ? "/myaccount" : "/sign-in"}>
+          <Avatar />
+        </Link>
       </button>
     </div>
   );
